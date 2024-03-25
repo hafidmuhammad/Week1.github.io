@@ -92,8 +92,9 @@ nav li {
 #slider {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: row;
+    /* scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; */
 }
 
 .card {
@@ -156,17 +157,15 @@ nav li {
         flex-flow: column nowrap;
     }
 
-    main aside {
-        align-self: center;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    nav ul {
-        justify-content: center;
+    main {
+        align-items: center;
     }
 
-    main aside {
-        align-self: stretch;
+    #slider {
+        display: flex;
+        flex-direction: column;
     }
 }
