@@ -1,0 +1,172 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+    margin: 5;
+    /* Check this value, it might need units like '5px' */
+}
+
+/* Content section */
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+/* Sidebar */
+aside {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Navbar styling */
+.navbar-container {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #051937;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Navbar links */
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    gap: 2rem 1rem;
+}
+
+nav {
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+/* Slider */
+#slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content details {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.card-content details summary {
+    outline: none;
+    font-weight: bold;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Video wrapper */
+.video-wrapper {
+    position: relative;
+    display: block;
+    max-width: 70%;
+    margin: 2 auto;
+    overflow: hidden;
+    border: 20px solid white;
+    border-radius: 20px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width:1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
