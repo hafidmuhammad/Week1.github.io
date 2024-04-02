@@ -1,179 +1,150 @@
-/* Box sizing */
-*,
+* Box sizing */ *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Reset body */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main content */
 main {
-    padding: 20px;
-    display: flex;
-    gap: 1.5rem;
-    margin: 5;
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+  margin: 5;
+}
+aside {
+  flex: 1;
 }
 
-
-/* Sidebar */
-aside {
-    flex: 1;
+.navbar-container {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #051937;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
 }
 
 /* Footer styling */
 footer {
-    padding: 5px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    font-weight: bold;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
 }
-
-/* Navbar styling */
-.navbar-container {
-    font-size: 20px;
-    padding: 60px;
-    background-color: #051937;
-    text-align: center;
-    color: white;
-    border-radius: 20px;
-}
-
-/* Navbar links */
-header.navbar-container .nav-list ul {
-    padding-left: 0;
-    display: flex;
-    gap: 2rem 1rem;
-}
-
-nav {
-    padding: 5px;
-    position: sticky;
-    top: 0;
-}
-
 
 /* Slider */
 #slider {
-    display: flex;
-    overflow-x: auto;
-    /* flex-direction: row; */
-    flex: 1 0 calc(100% / 3);
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: auto;
+  /* flex-direction: row; */
+  flex: 1 0 calc(100% / 3);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .card {
-    flex: 0 0 auto;
-    width: 300px;
-    margin-right: 10px;
-    scroll-snap-align: start;
-    border: 2px solid #ddd;
-    border-radius: 20px;
-    overflow: hidden;
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .card:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-
 .card-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .card-content h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .card-content details {
-    margin-top: 15px;
-    cursor: pointer;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 .card-content details summary {
-    outline: none;
-    font-weight: bold;
+  outline: none;
+  font-weight: bold;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #ddd;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
 }
 
-/* Video wrapper */
 .video-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 2 auto;
-    /* overflow: hidden; */
-    border: 20px solid white;
-    border-radius: 20px;
-
+  display: flex;
+  justify-content: center;
+  /* border: 20px solid white; */
 }
 
 .video-wrapper video {
-    width: 70%;
-    height: auto;
+  width: 70%;
+  height: auto;
 }
 
 .profil {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
-    width: 70%;
-    border-collapse: collapse;
+  width: 70%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
-
-
-/* Media Queries */
 @media screen and (min-width: 768px) {
-    #slider {}
+  #slider {
+  }
 }
 
 @media screen and (min-width: 481px) {
-    #slider {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    #slider {
-        flex: 1 0 100%;
-        flex-direction: column;
-        gap: 1rem 2rem;
-        align-items: center;
-
-    }
-
-    .video-wrapper video {
-        width: 100%;
-        height: auto;
-    }
-
+  #slider {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    justify-content: center;
+  }
+  .video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* border: 20px solid white; */
+    border-radius: 20px;
+  }
+  .video-wrapper video {
+    width: 50%;
+    height: auto;
+  }
 }
